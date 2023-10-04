@@ -1,0 +1,257 @@
+cl<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportify</title>
+  
+</head>
+
+<body>
+  <div id="content">
+    <!-- NAVBAR -->
+    <nav>
+      <i class="bx bx-menu"></i>
+      <a href="#" class="nav-link"></a>
+      <form action="#">
+        <div class="form-input">
+          <input type="search" placeholder="Search...">
+          <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+      </form>
+      <input type="checkbox" id="switch-mode" hidden>
+      <label for="switch-mode" class="switch-mode"></label>
+      <a href="#" class="notification">
+        <i class="fas fa-bell"></i>
+        <span class="num">8</span>
+      </a>
+      <a href="#" class="profile">
+        <img src="images/football.png" alt="Profile">
+      </a>
+    </nav>
+
+    <div class="wrapper">
+      <!-- Top menu -->
+      <div class="sidebar">
+        <div class="profile">
+          <img src="images/football.png" alt="Logo">
+          <h2>SPOR<span class="danger">TIFY</span></h2>
+        </div>
+
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-home"></i></span>
+              <span class="item">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-desktop"></i></span>
+              <span class="item">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-toggle">
+              <span class="icon"><i class="fas fa-user-friends"></i></span>
+              <span class="item">Account</span>
+              <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="fas fa-registered"></i> Register</a></li>
+              <li><a href="#"><i class="fas fa-user-plus"></i> Signup</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-unlock-alt"></i></span>
+              <span class="item">Authenti</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-football"></i></span>
+              <span class="item">Game</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-signature"></i></span>
+              <span class="item">Participate</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-comment"></i></span>
+              <span class="item">Messages</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-chart-line"></i></span>
+              <span class="item">Reports</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-user-shield"></i></span>
+              <span class="item">Admin</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-cog"></i></span>
+              <span class="item">Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+              <span class="item">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="top_navbar">
+          <div class="close">
+            <a href="#">
+              <i class="fas fa-bars"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Content wrapper -->
+<div class="content-wrapper">
+  <!-- Content -->
+  <div class="container-xxl flex-grow-1 container-p-y">
+    <div class="row">
+      <div class="col-lg-8 mb-4 order-0">
+        <div class="card">
+          <div class="d-flex align-items-end">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
+              <p class="mb-4">
+                You have played <span class="fw-bold">well</span> today.
+              </p>
+            </div>
+            <div class="text-start">
+              <img
+                src="images/man-with-laptop-light.png"
+                height="140"
+                data-app-dark-img="images/man-with-laptop-dark.png"
+                data-app-light-img="images/man-with-laptop-light.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Select the elements
+      const navToggle = document.querySelector('nav i.bx-menu');
+      const sidebar = document.querySelector('.wrapper .sidebar');
+      const closeBtn = document.querySelector('.wrapper .section .top_navbar .close a');
+      const body = document.body;
+
+      // Function to toggle the sidebar
+      function toggleSidebar() {
+        sidebar.classList.toggle('active');
+        body.classList.toggle('active');
+      }
+
+      // Add event listener to the nav toggle button
+      navToggle.addEventListener('click', toggleSidebar);
+
+      // Add event listener to the close button
+      closeBtn.addEventListener('click', toggleSidebar);
+    });
+
+    var content = document.getElementsByTagName('body')[0];
+    var darkMode = document.getElementById('switch-mode');
+    darkMode.addEventListener('click', function() {
+      darkMode.classList.toggle('active');
+      content.classList.toggle('night');
+    });
+
+    const searchButton = document.querySelector('#content nav form .form-input button');
+    const searchButtonIcon = document.querySelector('#content nav form .form-input button i');
+    const searchForm = document.querySelector('#content nav form');
+    const sidebar = document.querySelector('.wrapper .sidebar');
+
+    searchButton.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent form submission
+      if (window.innerWidth < 576) {
+        searchForm.classList.toggle('show');
+        if (searchForm.classList.contains('show')) {
+          searchButtonIcon.classList.replace('fa-search', 'fa-times');
+        } else {
+          searchButtonIcon.classList.replace('fa-times', 'fa-search');
+        }
+      }
+    });
+
+    if (window.innerWidth < 768) {
+      sidebar.classList.add('hide');
+    } else if (window.innerWidth > 576) {
+      searchButtonIcon.classList.replace('fa-times', 'fa-search');
+      searchForm.classList.remove('show');
+    }
+
+    window.addEventListener('resize', function() {
+      if (this.innerWidth > 576) {
+        searchButtonIcon.classList.replace('fa-times', 'fa-search');
+        searchForm.classList.remove('show');
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchButton = document.querySelector('#content nav form .form-input button');
+
+      searchButton.classList.add('active');
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var dropdownToggle = document.querySelector(".dropdown-toggle");
+      var dropdownMenu = document.querySelector(".dropdown-menu");
+
+      dropdownToggle.addEventListener("click", function(e) {
+        e.preventDefault();
+        dropdownMenu.classList.toggle("show");
+      });
+
+      // Close the dropdown when clicking outside
+      document.addEventListener("click", function(event) {
+        var target = event.target;
+        if (!target.closest(".dropdown-toggle")) {
+          dropdownMenu.classList.remove("show");
+        }
+      });
+    });
+  </script>
+    
+</html></body>
